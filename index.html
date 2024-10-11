@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== CSS ===== -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <!-- ===== BOX ICONS ===== -->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>Portfolio responsive complete</title>
+    
+    <style>
+        
+        /* Styles pour le modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-content {
+            background-color: #f4f4f4;
+            margin: 10% auto;
+            padding: 20px;
+            border-radius: 10px;
+            width: 60%;
+            max-width: 900px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        .experience__text {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .experience .section-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .icon-text {
+            display: flex;
+            align-items: center;
+            font-size: 1.1em;
+        }
+
+        .icon-text i {
+            margin-right: 10px;
+            font-size: 1.3em;
+            color: #007bff;
+        }
+
+        /* Styles pour centrer la vidéo */
+        .video-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .video-container h3 {
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        video {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Adaptation pour les écrans plus petits */
+        @media screen and (max-width: 768px) {
+            .modal-content {
+                width: 90%;
+            }
+        }
+    
+        /* Modal default styles */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4); /* Black background with opacity */
+        }
+
+        /* Modal Content */
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+
+        /* Close Button */
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!--===== HEADER =====-->
+    <header class="l-header">
+        <nav class="nav bd-grid">
+            <div>
+                <a href="#" class="nav__logo">FRIKHA Molka</a>
+            </div>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+                    <li class="nav__item"><a href="#portfolio" class="nav__link">Portfolio</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="l-main">
+        <!--===== HOME =====-->
+        <section class="home" id="home">
+            <div class="home__container bd-grid">
+                <h1 class="home__title"><span>HE</span><br>LLO.</h1>
+
+                <div class="home__scroll">
+                    <a href="#about" class="home__scroll-link"><i class='bx bx-up-arrow-alt'></i>Scroll down</a>
+                </div>
+
+                <img src="assets/img/molka - Copie.png" alt="" class="home__img">
+            </div>
+        </section>
+        
+        <!--===== ABOUT =====-->
+        <section class="about section" id="about">
+            <h2 class="section-title">About</h2>
+
+            <div class="about__container bd-grid">
+                <div class="about__img">
+                    <img src="assets/img/molka - Copie.png" alt="">
+                </div>
+
+                <div>
+                    <h2 class="about__subtitle">FRIKHA Molka</h2>
+                    <span class="about__profession">Computer Engineer</span>
+                    <p class="about__text">I am a third-year computer engineering student, passionate about full-stack web development, with skills in Java (Spring Boot), Node.js, Django, and .NET. Excited to create innovative applications, I am looking for an internship to apply my skills and gain valuable experience as I work towards obtaining my engineering degree.</p>
+                
+                    <div class="about__social">
+                        <a href="https://www.linkedin.com/in/molka-frikha-5b57851a3/" class="about__social-icon"><i class='bx bxl-linkedin'></i></a>
+                        <a href="https://github.com/molkafrikha" class="about__social-icon"><i class='bx bxl-github'></i></a>
+                        
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+        <!--===== SKILLS =====-->
+        <section class="skills section" id="skills">
+            <h2 class="section-title">Skills</h2>
+        
+            <div class="skills__container bd-grid">
+                <div class="skills__box">
+                    <h3 class="skills__subtitle">Front-End</h3>
+                    <span class="skills__name">Angular</span>
+                    <span class="skills__name">ReactJS</span>
+                    
+                    <h3 class="skills__subtitle">Back-End</h3>
+                    <span class="skills__name">Node.js</span>
+                    <span class="skills__name">Spring Java</span>
+                    <span class="skills__name">.NET</span>
+                    <span class="skills__name">Django</span>
+        
+                    <h3 class="skills__subtitle">Frameworks</h3>
+                    <span class="skills__name">Symfony</span>
+                    <span class="skills__name">Laravel</span>
+                    <span class="skills__name">CakePHP</span>
+        
+                    <h3 class="skills__subtitle">Databases</h3>
+                    <span class="skills__name">Oracle</span>
+                    <span class="skills__name">MySQL</span>
+                    <span class="skills__name">PL/SQL</span>
+                    <span class="skills__name">MongoDB</span>
+        
+                    <h3 class="skills__subtitle">Machine Learning</h3>
+                    <span class="skills__name">TensorFlow</span>
+                    <span class="skills__name">PyTorch</span>
+                    <span class="skills__name">Keras</span>
+                    <span class="skills__name">Python</span>
+        
+                    <h3 class="skills__subtitle">DevOps</h3>
+                    <span class="skills__name">Docker</span>
+                    <span class="skills__name">CI/CD</span>
+                    <span class="skills__name">Jenkins</span>
+                    <span class="skills__name">SonarQube</span>
+                    <span class="skills__name">Nexus</span>
+        
+                    <h3 class="skills__subtitle">Other Skills</h3>
+                    <span class="skills__name">Blockchain</span>
+                    <span class="skills__name">UX Design</span>
+                </div>
+        
+                <div class="skills__img">
+                    <img src="assets/img/skill.jpg" alt="Skills Image">
+                </div>
+            </div>
+        </section>
+        
+        <!--===== Modal Structure =====-->
+        <div id="modalProject1" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modalProject1')">&times;</span>
+        
+                <main class="l-main">
+                    <!-- Section Expérience -->
+                    <section class="experience section" id="experience">
+                        <h2 class="section-title">My experience at Redx</h2>
+        
+                        <!-- Ajout des icônes pour les dates et autres informations -->
+                        <div class="icon-text">
+                            <i class='bx bx-calendar'></i> Juin 2024 – Août 2024
+                        </div>
+                        <div class="experience__text">
+                            Summer engineering internship<br>
+                            Design and development of a web and mobile application for assessing image quality in an event management system related to fire and flood incidents.<br>
+                            Implementation of artificial intelligence (AI) pipelines to evaluate image quality.<br>
+                            Creation of a user interface for workers to upload photos.<br>
+                            Development of an API to receive photos, run AI processing, and allow requesters to view the final photos.<br>
+                            <i class='bx bxs-wrench'></i>   Tools used : Django , Angular, Android Studio, SQL database.
+                        </div>
+                        
+        
+                        <!-- Vidéo de démonstration -->
+                        <div class="video-container">
+                            <h3>Application Demonstration</h3>
+                            <video controls>
+                                <source src="C:\Users\USER\Desktop\5twin 2\github-portfolio\assets\img\takleff" type="video/mp4">
+                                Votre navigateur ne supporte pas la lecture de vidéos.
+                            </video>
+                        </div>
+                    </section>
+        
+                </main>
+            </div>
+        </div>
+
+
+        <div id="modalProject2" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modalProject2')">&times;</span>
+                <section class="experience section" id="experience">
+                    <h2 class="section-title">My experience at BlockPlusPlus</h2>
+                    <div class="icon-text">
+                        <i class='bx bx-calendar'></i> Juin 2023 – Août 2023
+                    </div>
+                    <div class="experience__text">
+                        Summer internship in Web 3.0 development.<br>
+                        Development of decentralized applications using the MERN stack (MongoDB, Express.js, React.js, Node.js) and blockchain.<br>
+                        Improving project efficiency through blockchain technology.<br>
+                        Integrating blockchain technology into company projects.<br>
+                        Implementing an ID card verification feature to enhance user authentication and security.<br>
+                        <i class='bx bxs-wrench'></i>   Tools used: Express.js, React.js, Node.js, Flask, MongoDB, blockchain.
+                    </div>
+                    <div class="video-container">
+                        <h3>Application Demonstration</h3>
+                        <video controls>
+                            <source src="C:\Users\USER\Desktop\5twin 2\github-portfolio\assets\img\block.mp4" type="video/mp4">
+                            Votre navigateur ne supporte pas la lecture de vidéos.
+                        </video>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <div id="modalProject3" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modalProject3')">&times;</span>
+                <section class="experience section" id="experience">
+                    <h2 class="section-title">Tournament Management Application</h2>
+                    <div class="icon-text">
+                        <i class='bx bx-calendar'></i> Month 2024
+                    </div>
+                    <div class="experience__text">
+                        Development of a tournament management application.<br>
+                        Using Express.js for the back-end, React for the front-end, and MongoDB for the database.<br>
+                        Integration of advanced APIs using Flask.<br>
+                        Setting up a CI/CD pipeline with Jenkins.<br>
+                        Static code analysis with SonarQube.<br>
+                        Artifact management with Nexus.<br>
+                        Containerization of the application with Docker.<br>
+                        Development of skills in leadership, project management, and software development.<br>
+                        <i class='bx bxs-wrench'></i> Tools used: Express Js, ReactJs, MongoDB, Jenkins, SonarQube, Docker, Nexus, Flask.
+                    </div>
+                    <div class="image-gallery">
+                        <img src="assets/img/foot1.png" alt="Project Image 1" class="gallery-image">
+                        <img src="assets/img/foot.jfif" alt="Project Image 2" class="gallery-image">
+                    </div>
+                </section>
+            </div>
+        </div>
+        
+
+        <!--===== PORTFOLIO =====-->
+        <section class="portfolio section" id="portfolio">
+            <h2 class="section-title">My projects</h2>
+            <div class="portfolio__container bd-grid">
+                <div class="portfolio__img">
+                    <img src="assets/img/takleef.png" alt="">
+                    <span>Application for fire and floods detection</span>
+                    <div class="portfolio__link">
+                        <a href="javascript:void(0);" class="portfolio__link-name" onclick="openModal('modalProject1')">View details</a>
+                    </div>
+                </div>
+                <div class="portfolio__img">
+                    <img src="assets/img/block1.png" alt="">
+                    <span> footmarket Application</span>
+                    <div class="portfolio__link">
+                        <a href="javascript:void(0);" class="portfolio__link-name" onclick="openModal('modalProject2')">View details</a>
+                    </div>
+                </div>
+
+                <div class="portfolio__img">
+                    <img src="assets/img/foot1.png" alt="">
+                    <span> Tournament Management Application</span>
+                    <div class="portfolio__hover">
+                        
+                        <div class="portfolio__link">
+                            <a href="javascript:void(0);" class="portfolio__link-name" onclick="openModal('modalProject3')">View details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+        
+
+        </section>
+
+
+       
+        <!--===== CONTACT =====-->
+        <section class="contact section" id="contact">
+            <h2 class="section-title">Contact</h2>
+
+            <div class="contact__container bd-grid">
+                
+                    <h3 class="contact__subtitle">EMAIL</h3>
+                    <span class="contact__text">molka.frikha@esprit.tn</span>
+
+                    <h3 class="contact__subtitle">PHONE</h3>
+                    <span class="contact__text"> +216 29671076</span>
+
+                    <h3 class="contact__subtitle">ADDRESS</h3>
+                    <span class="contact__text">Tunis, Ariana 2083</span>
+               
+
+               
+            </div>
+        </section>
+    </main>
+
+    <!--===== FOOTER =====-->
+    <footer class="footer section">
+        <div class="footer__container bd-grid">
+            <div class="footer__data">
+                <h2 class="footer__title">FRIKHA Molka</h2>
+                <p class="footer__text">I'm FRIKHA Molka and this is my personal website</p>
+            </div>
+
+            <div class="footer__data">
+                <h2 class="footer__title">EXPLORE</h2>
+                <ul>
+                    <li><a href="#home" class="footer__link">Home</a></li>
+                    <li><a href="#about" class="footer__link">About</a></li>
+                    <li><a href="#skills" class="footer__link">Skills</a></li> 
+                    <li><a href="#portfolio" class="footer__link">Portfolio</a></li>
+                    <li><a href="#contact" class="footer__link">Contact</a></li>
+                </ul>
+            </div>
+
+           
+        </div>
+    </footer>
+
+    <script>
+        // Function to open the modal
+        function openModal(modalId) {
+            var modal = document.getElementById(modalId);
+            if (modal) {
+                modal.style.display = "block";
+            }
+        }
+
+        // Function to close the modal
+        function closeModal(modalId) {
+            var modal = document.getElementById(modalId);
+            if (modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        // Close modal when clicking outside of it
+        window.onclick = function(event) {
+            var modal = document.getElementById("modalProject1");
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+        window.onclick = function(event) {
+            var modal = document.getElementById("modalProject2");
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>

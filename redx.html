@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== CSS ===== -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <!-- ===== BOX ICONS ===== -->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>Mon expérience chez Redx</title>
+</head>
+<body>
+    <!--===== HEADER =====-->
+    <header class="l-header">
+        <nav class="nav bd-grid">
+            <div>
+                <a href="#" class="nav__logo">FRIKHA Molka</a>
+            </div>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link">Accueil</a></li>
+                    <li class="nav__item"><a href="#experience" class="nav__link active">Expérience</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="l-main">
+        <!--===== EXPÉRIENCE =====-->
+        <section class="experience section" id="experience">
+            <h2 class="section-title">Mon expérience chez Redx</h2>
+            <p class="experience__text">
+                Stage d'été d'ingénieur<br>
+                Juin 2024 – Août 2024<br>
+                Conception et développement d'une application web et mobile pour l'évaluation de la qualité des images dans une application de gestion d'événements liés aux incendies et inondations.<br>
+                Implémentation des pipelines d'IA pour évaluer la qualité des images.<br>
+                Création d'une interface utilisateur pour les travailleurs afin de leur permettre de télécharger des photos.<br>
+                Développement d'une API pour recevoir les photos, exécuter le traitement d'IA, et permettre aux demandeurs de visualiser les photos finales.<br>
+                Outils utilisés : Django, Angular, Android Studio, base de données SQL.
+            </p>
+            
+            <!-- Vidéo de démonstration -->
+            <div class="video-container">
+                <h3>Démonstration de l'application</h3>
+                <video width="600" controls>
+                    <source src="path/to/your/video.mp4" type="video/mp4">
+                    Votre navigateur ne supporte pas la lecture de vidéos.
+                </video>
+            </div>
+        </section>
+
+        <!--===== CONTACT =====-->
+        <section class="contact section" id="contact">
+            <h2 class="section-title">Contact</h2>
+
+            <div class="contact__container bd-grid">
+                <div class="contact__info">
+                    <h3 class="contact__subtitle">EMAIL</h3>
+                    <span class="contact__text">molka.frikha@esprit.tn</span>
+
+                    <h3 class="contact__subtitle">TÉLÉPHONE</h3>
+                    <span class="contact__text"> +216 29671076</span>
+
+                    <h3 class="contact__subtitle">ADRESSE</h3>
+                    <span class="contact__text">Tunis, Ariana 2083</span>
+                </div>
+
+                <form action="" class="contact__form">
+                    <div class="contact__inputs">
+                        <input type="text" placeholder="Nom" class="contact__input">
+                        <input type="mail" placeholder="Email" class="contact__input">
+                    </div>
+
+                    <textarea placeholder="Message" class="contact__input"></textarea>
+
+                    <input type="submit" value="Envoyer" class="contact__button">
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!--===== FOOTER =====-->
+    <footer class="footer section">
+        <div class="footer__container bd-grid">
+            <div class="footer__data">
+                <h2 class="footer__title">FRIKHA Molka</h2>
+                <p class="footer__text">Merci de visiter ma page sur mon expérience chez Redx.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
